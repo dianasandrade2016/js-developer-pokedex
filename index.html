@@ -1,46 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
-
+    
     <!-- Normalize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Font Roboto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <!--Font Roboto-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    
+    <!--Nosso CSS-->
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/nav-bar.css">
+    <link rel="stylesheet" href="./assets/css/pokedex.css">
+    <link rel="stylesheet" href="./assets/css/box.css">
 
-    <!-- Nosso CSS -->
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/pokedex.css">
 </head>
 
 <body>
-    <section class="content">
-        <h1>Pokedex</h1>
+    <ul>
+        <li> <a class = "active" href = "#home">dribbble</a></li>
+        <div> <a class = "active1" href = "#contact">Pokedex App</a></div>
+        <div>by <a class = "active2" href = "#about">Saepul Nahwan</a></div>
+    </ul>
 
-        <ol id="pokemonList" class="pokemons">
-            <!-- ..... Pokemons here ..... -->
-        </ol>
 
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
-        </div>
+    <section class="content"> 
+        <div class="container">
+            <h1> Pokedex </h1>
+             <!-- Pokemons Here-->
+            <ol id= pokemonList class="pokemons"></ol>
+        </div>    
+        <div class="container2">   
+            <ol id = "tela"></ol>  
+            <ol id = "tela2"></ol> 
+
+                <div id = "tela4" class="pagination_onglets" >     
+                    <div class="onglets" data-anim="1"> <a href="#" class="btn btn-2">About</a></div> 
+                    <div class="onglets" data-anim="2"> <a href="#" class="btn btn-2">Base Stats</a></div> 
+                    <div class="onglets" data-anim="3"> <a href="#" class="btn btn-2">Evolution</a></div> 
+                    <div class="onglets" data-anim="2"> <a href="#" class="btn btn-2">Moves</a></div>                     
+                </div>
+             
+                <div class="contenu" data-anim="1">
+                    <table>
+                        <tr>
+                        <td class="gg">Species</td>
+                        <td class= "ggg" id="contenu_container1"></td>                    
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr>
+                        <td class="gg">Height</td>
+                        <td class="ggg" id="contenu_container2"></td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr>
+                        <td class="gg">Weight</td>
+                        <td class="ggg" id="contenu_container3"></td>
+                        </tr>
+                    </table>
+            
+
+                    <table>
+                        <tr>
+                        <td class="gg">Abilities</th>
+                        <td class="ggg" id="contenu_container4"></td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr>
+                        <td class="gg"><h3>Breading</h3></td>
+                        </tr>
+                    </table>
+ 
+                    <table id="idtable">
+                        <tr>
+                        <td class="gg">Gender</td>
+                        <td class="gg"><h3>87.5%</h3></td>
+                        <td class="gg"><h3>12.5%</h3></td>
+                        </tr>
+                    </tabled=>
+                   
+                    <table>
+                        <tr>
+                        <td class="gg">Egg Groups</td>
+                        <td class="ggg"><h3>Moster</h3></td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr>
+                            <td class="gg">Egg Circle</td>
+                            <td class="ggg"><h3>Grass</h3></td>
+                        </tr>
+                    </table>
+                </div>
+                     
+            <div class="contenu" data-anim="2"> 
+                <table>
+                    <tr>
+                      <td class="gg"></td>
+                      <td class="ggg"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="contenu " data-anim="3"> 
+                <table>
+                    <tr>
+                      <td class="gg"></td>
+                      <td class="ggg"></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="contenu " data-anim="4">  
+                <table>
+                    <tr>
+                      <td class="gg"></td>
+                      <td class="ggg"></td>
+                    </tr>
+                </table>
+             </div>
+        </div> 
+
+        <div class="container3">
+            <ol id = "tela1"></ol>  
+            <ol id = "tela3"></ol>  
+
+            <div id = "tela4" class="pagination_onglets" >      
+                <div class="onglets1" data-anim="1"> <a href="#" class="btn btn-2">About</a></div> 
+                <div class="onglets1" data-anim="2"> <a href="#" class="btn btn-2">Base Stats</a></div> 
+                <div class="onglets1" data-anim="3"> <a href="#" class="btn btn-2">Evolution</a></div> 
+                <div class="onglets1" data-anim="4"> <a href="#" class="btn btn-2">Moves</a></div> 
+            </div>
+        
+            <div class="contenu1" data-anim="1"> 
+                <table>
+                    <tr>
+                    <td class="gg">Species</td>
+                    <td class="ggg" id="info1_species"></td>     
+                    </tr>      
+                </table>
+
+            </div>
+
+            <div class="contenu1" data-anim="2">         
+                <table>
+                    <tr>
+                    <td class="ggg" id="info2_stats_name"></td>
+                    <td class="ggg" id="info2_base_stat"></td>                      
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                    <td class="ggg">Total</td>
+                    <td class="ggg" id="total"></td>
+                    </tr>
+                </table>
+                               
+          
+                <table>
+                    <tr>
+                    <td class="ggg"><h3>Type Defenses</h3></td>
+                    </tr>
+                    <tr>
+                    <td class="ggg3">Type effectiveness of each type on Chamander.</td> 
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="contenu1" data-anim="3"> 
+                <table>
+                    <tr>
+                      <td class="gg"></td>
+                      <td class="ggg"></td>
+                    </tr>
+                  </table>
+            </div>
+
+            <div class="contenu1" data-anim="4"> 
+                <table>
+                    <tr>
+                      <td class="gg"></td>
+                      <td class="ggg"></td>
+                    </tr>
+                  </table>
+            </div>  
+          
+</div>
+
     </section>
 
-    <!-- Nosso JS -->
-    <script src="/assets/js/pokemon-model.js"></script>
-    <script src="/assets/js/poke-api.js"></script>
-    <script src="/assets/js/main.js"></script>
-</body>
 
+    <!--Nosso JS--> 
+    <script src="./assets/js/pokemon_1.js"></script>
+    <script src="./assets/js/pokemon_4.js"></script>
+    <script src="./assets/js/pokemon_1_pagination.js"></script>
+    <script src="./assets/js/pokemon_4_pagination.js"></script>
+    
+
+    <script src="./assets/js/pokemon-model.js"></script>
+    <script src="./assets/js/poke-api.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+
+</body>
 </html>
+
+
+
+
+
+
